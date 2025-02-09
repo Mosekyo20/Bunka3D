@@ -1,4 +1,66 @@
-/* Fondo del contenedor del formulario */
+/* Estilos Generales */
+body {
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra de Navegación */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-logo {
+    height: 40px;
+    width: auto;
+    filter: brightness(0.5); /* Oscurece el logo */
+}
+
+/* Jumbotron de Bienvenida */
+.jumbotron-welcome {
+    background: rgba(0,0,0,0.7);
+    border-radius: 15px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+/* Carrusel de Imágenes */
+.image-carousel {
+    max-width: 800px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: none;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.5);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+/* Formulario de Cotización */
 .container {
     background: rgba(255, 255, 255, 0.9); /* Fondo casi blanco */
     border-radius: 15px;
@@ -7,7 +69,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Jumbotron del formulario */
 .jumbotron-info {
     background: rgba(255, 255, 255, 0.9); /* Fondo casi blanco */
     color: #333; /* Texto oscuro */
@@ -15,26 +76,22 @@
     padding: 2rem;
 }
 
-/* Etiquetas del formulario */
 .form-group label {
     color: #333; /* Texto oscuro para las etiquetas */
 }
 
-/* Campos de entrada */
 .form-control {
     background: rgba(255, 255, 255, 0.9); /* Fondo casi blanco */
     border: 1px solid #ccc; /* Borde gris */
     color: #333; /* Texto oscuro */
 }
 
-/* Efecto al enfocar un campo */
 .form-control:focus {
     background: rgba(255, 255, 255, 1); /* Fondo blanco sólido */
     border-color: #007bff;
     color: #333; /* Texto oscuro */
 }
 
-/* Zona de arrastre de archivos */
 .drop-zone {
     background: rgba(255, 255, 255, 0.9); /* Fondo casi blanco */
     border: 2px dashed #ccc; /* Borde gris */
@@ -42,14 +99,12 @@
     transition: background 0.3s, border-color 0.3s;
 }
 
-/* Efecto al pasar el ratón sobre la zona de arrastre */
 .drop-zone:hover {
     background: rgba(255, 255, 255, 1); /* Fondo blanco sólido */
     border-color: #007bff;
     color: #333; /* Texto oscuro */
 }
 
-/* Botón de enviar */
 .btn-primary {
     background-color: #007bff;
     border-color: #007bff;
@@ -57,13 +112,10 @@
     transition: background-color 0.3s, border-color 0.3s;
 }
 
-/* Efecto al pasar el ratón sobre el botón */
 .btn-primary:hover {
     background-color: #0056b3;
     border-color: #004085;
 }
 
-/* Mensajes de error */
 .invalid-feedback {
-    color: #ff6b6b; /* Color rojo para errores */
-}
+    color: #ff6b
