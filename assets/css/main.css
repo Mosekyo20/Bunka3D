@@ -9,7 +9,7 @@
 
 /* Jumbotron del formulario */
 .jumbotron-info {
-    background: rgba(255, 255, 255, 0); /* Fondo casi blanco */
+    background: rgba(255, 255, 255, 0.9); /* Fondo casi blanco */
     color: #333; /* Texto oscuro */
     border-radius: 10px;
     padding: 2rem;
@@ -23,7 +23,7 @@
 /* Campos de entrada */
 .form-control {
     background: rgba(255, 255, 255, 0.9); /* Fondo casi blanco */
-    border: 1px solid #333; /* Borde gris */
+    border: 1px solid #ccc; /* Borde gris */
     color: #333; /* Texto oscuro */
 }
 
@@ -37,7 +37,7 @@
 /* Zona de arrastre de archivos */
 .drop-zone {
     background: rgba(255, 255, 255, 0.9); /* Fondo casi blanco */
-    border: 2px dashed #333; /* Borde gris */
+    border: 2px dashed #ccc; /* Borde gris */
     color: #333; /* Texto oscuro */
     transition: background 0.3s, border-color 0.3s;
 }
