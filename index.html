@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunka3D</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="assets/img/logo.png" alt="Logo" class="navbar-logo mr-2">
+            <span class="navbar-title">Bunka3D</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Cotización</a></li>
+                <li class="nav-item"><a class="nav-link" href="modelos.html">Modelos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Jumbotron de Bienvenida -->
+    <div class="jumbotron jumbotron-welcome text-center">
+        <h1 class="display-4">¡Bienvenido a Nuestro Servicio de Impresión 3D!</h1>
+        <p class="lead">Transformamos tus ideas en realidad</p>
+        <a class="btn btn-primary btn-lg" href="about.html" role="button">Solicitar Cotización</a>
+    </div>
+
+    <!-- Carrusel de Imágenes -->
+    <div class="image-carousel">
+        <div class="carousel-images">
+            <img src="assets/img/imagen1.png" alt="Modelo 1" class="carousel-image active">
+            <img src="assets/img/imagen2.png" alt="Modelo 2" class="carousel-image">
+            <img src="assets/img/imagen3.png" alt="Modelo 3" class="carousel-image">
+        </div>
+        <button class="carousel-button prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="carousel-button next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- Pie de Página -->
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p>Síguenos en <a href="https://instagram.com/bunka3d" target="_blank">Instagram</a></p>
+            <p>Contacto: <a href="mailto:info@bunka3d.com">info@bunka3d.com</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Carrusel Automático
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-image');
+        
+        function showSlide(index) {
+            if (index >= slides.length) currentSlide = 0;
+            if (index < 0) currentSlide = slides.length - 1;
+            slides.forEach((slide, i) => {
+                slide.style.display = i === currentSlide ? 'block' : 'none';
+            });
+        }
+        
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+        
+        setInterval(() => {
+            currentSlide++;
+            showSlide(currentSlide);
+        }, 3000);
+        
+        showSlide(0);
+    </script>
+</body>
+</html>

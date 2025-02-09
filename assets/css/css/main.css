@@ -1,0 +1,87 @@
+/* Estilos Generales */
+body {
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra de Navegación */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-logo {
+    height: 40px;
+    width: auto;
+}
+
+/* Jumbotron */
+.jumbotron-welcome {
+    background: rgba(0,0,0,0.7);
+    border-radius: 15px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+/* Carrusel */
+.image-carousel {
+    max-width: 800px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.carousel-image {
+    width: 100%;
+    border-radius: 10px;
+    display: none;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.5);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+/* Formulario */
+.drop-zone {
+    border: 2px dashed #007bff;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.drop-zone:hover {
+    background: rgba(0,123,255,0.1);
+}
+
+/* Pie de Página */
+.footer {
+    background: rgba(0,0,0,0.8);
+    padding: 1rem;
+    margin-top: auto;
+}
+
+.footer a {
+    color: #4da8da;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #007bff;
+}

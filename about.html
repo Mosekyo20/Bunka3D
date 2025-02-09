@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotización - Bunka3D</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Barra de Navegación (Igual que index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="assets/img/logo.png" alt="Logo" class="navbar-logo mr-2">
+            <span class="navbar-title">Bunka3D</span>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Cotización</a></li>
+                <li class="nav-item"><a class="nav-link" href="modelos.html">Modelos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido del Formulario -->
+    <div class="container mt-4">
+        <div class="jumbotron jumbotron-info">
+            <h1 class="display-5">Solicita tu Presupuesto</h1>
+            <p class="lead">Completa el formulario para recibir una cotización:</p>
+        </div>
+
+        <form id="cotizacionForm" novalidate>
+            <!-- Campos del Formulario -->
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" required>
+                <div class="invalid-feedback">Campo obligatorio.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="archivo">Subir Archivo 3D:</label>
+                <div class="drop-zone" onclick="document.getElementById('archivo').click()">
+                    Arrastra o haz clic para subir
+                </div>
+                <input type="file" id="archivo" accept=".stl,.obj" hidden>
+                <div class="invalid-feedback">Sube un archivo válido.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Enviar Solicitud</button>
+        </form>
+    </div>
+
+    <!-- Pie de Página (Igual que index.html) -->
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p>Síguenos en <a href="https://instagram.com/bunka3d" target="_blank">Instagram</a></p>
+            <p>Contacto: <a href="mailto:info@bunka3d.com">info@bunka3d.com</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Validación del Formulario
+        document.getElementById('cotizacionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (this.checkValidity()) {
+                alert('Solicitud enviada correctamente.');
+            } else {
+                this.classList.add('was-validated');
+            }
+        });
+    </script>
+</body>
+</html>
