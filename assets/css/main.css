@@ -1,59 +1,89 @@
-/* Estilos para el formulario de cotización */
-.container {
-    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+/* Estilos Generales */
+body {
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra de Navegación */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-logo {
+    height: 40px;
+    width: auto;
+}
+
+/* Jumbotron */
+.jumbotron-welcome {
+    background: rgba(0,0,0,0.7);
     border-radius: 15px;
+    margin: 2rem auto;
     padding: 2rem;
-    margin-top: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.jumbotron-info {
-    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
-    color: white;
+/* Carrusel */
+.image-carousel {
+    max-width: 800px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 400px; /* Altura fija para el carrusel */
+    object-fit: cover; /* Para que las imágenes no se deformen */
     border-radius: 10px;
-    padding: 2rem;
+    display: none;
 }
 
-.form-group label {
-    color: white; /* Texto blanco para las etiquetas */
+.carousel-image.active {
+    display: block;
 }
 
-.form-control {
-    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente para los inputs */
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white; /* Texto blanco para los inputs */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.5);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
 }
 
-.form-control:focus {
-    background: rgba(255, 255, 255, 0.2); /* Fondo más claro al enfocar */
-    border-color: #007bff;
-    color: white;
-}
-
+/* Formulario */
 .drop-zone {
-    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
-    border: 2px dashed rgba(255, 255, 255, 0.3);
-    color: rgba(255, 255, 255, 0.7); /* Texto semi-transparente */
-    transition: background 0.3s, border-color 0.3s;
+    border: 2px dashed #007bff;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .drop-zone:hover {
-    background: rgba(255, 255, 255, 0.2); /* Fondo más claro al pasar el ratón */
-    border-color: rgba(255, 255, 255, 0.5);
-    color: white;
+    background: rgba(0,123,255,0.1);
 }
 
-.btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    transition: background-color 0.3s, border-color 0.3s;
+/* Pie de Página */
+.footer {
+    background: rgba(0,0,0,0.8);
+    padding: 1rem;
+    margin-top: auto;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004085;
+.footer a {
+    color: #4da8da;
+    text-decoration: none;
 }
 
-.invalid-feedback {
-    color: #ff6b6b; /* Color rojo para mensajes de error */
+.footer a:hover {
+    color: #007bff;
 }
