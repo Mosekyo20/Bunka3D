@@ -23,7 +23,7 @@
 /* Campos de entrada */
 .form-control {
     background: rgba(255, 255, 255, 0.9); /* Fondo casi blanco */
-    border: 1px solid #ccc; /* Borde gris */
+    border: 1px solid #333; /* Borde gris */
     color: #333; /* Texto oscuro */
 }
 
