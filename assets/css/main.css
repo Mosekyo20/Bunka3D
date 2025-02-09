@@ -37,7 +37,7 @@
 /* Zona de arrastre de archivos */
 .drop-zone {
     background: rgba(255, 255, 255, 0.9); /* Fondo casi blanco */
-    border: 2px dashed #ccc; /* Borde gris */
+    border: 2px dashed #333; /* Borde gris */
     color: #333; /* Texto oscuro */
     transition: background 0.3s, border-color 0.3s;
 }
